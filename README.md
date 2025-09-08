@@ -1,6 +1,6 @@
-# Sample Photonics PDK 0.0.0
+# UPVfab PDK 0.1
 
-Based on Cornestone PDK
+PDK for UPVfab Foundry (SiN 300nm Proccess)
 
 ## Installation
 
