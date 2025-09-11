@@ -1,4 +1,4 @@
-"""Si220 pdk."""
+"""SiN300 pdk."""
 
 from functools import lru_cache
 
@@ -21,7 +21,7 @@ CONF.pdk = "upvfab.sin300.cband"
 
 @lru_cache
 def get_pdk() -> Pdk:
-    """Return Cornerstone PDK."""
+    """Return UPVfab PDK."""
     return Pdk(
         name="upvfab.sin300.cband",
         cells=_cells,
@@ -44,4 +44,5 @@ __all__ = [
     "cells",
     "config",
     "tech",
+    "models",
 ]

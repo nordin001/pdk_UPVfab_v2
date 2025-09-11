@@ -18,6 +18,12 @@ nm = 1e-3
 FloatArray = NDArray[jnp.floating]
 Float = float | FloatArray
 
+TECH_LOSS_DB_CM = 1.0
+TECH_NEFF = 1.67
+TECH_NG = 2.00
+
+TECH_IL_LOSS_TAPER = 0.0
+
 ################
 # Straights
 ################
@@ -25,27 +31,26 @@ Float = float | FloatArray
 straight_strip = partial(
     sm.straight,
     length=10.0,
-    loss_dB_cm=3.0,
+    loss_dB_cm=TECH_LOSS_DB_CM,
     wl0=1.55,
-    neff=2.38,
-    ng=4.30,
+    neff=TECH_NEFF,
+    ng=TECH_NG,
 )
 
 straight_rib = partial(
     sm.straight,
     length=10.0,
-    loss_dB_cm=3.0,
+    loss_dB_cm=TECH_LOSS_DB_CM,
     wl0=1.55,
-    neff=2.38,
-    ng=4.30,
+    neff=TECH_NEFF,
+    ng=TECH_NG,
 )
-
 
 def straight(
     *,
     wl: Float = 1.55,
     length: float = 10.0,
-    loss_dB_cm: float = 3.0,
+    loss_dB_cm: float = TECH_LOSS_DB_CM,
     cross_section: str = "strip",
 ) -> sax.SDict:
     """Straight waveguide model."""
@@ -78,7 +83,7 @@ def bend_s(
     *,
     wl: Float = 1.55,
     length: float = 10.0,
-    loss_dB_cm=3.0,
+    loss_dB_cm=TECH_LOSS_DB_CM,
     cross_section="strip",
 ) -> sax.SDict:
     """Bend S model."""
@@ -95,7 +100,7 @@ def bend_euler(
     *,
     wl: Float = 1.55,
     length: float = 10.0,
-    loss_dB_cm: float = 3,
+    loss_dB_cm: float = TECH_LOSS_DB_CM,
     cross_section="strip",
 ) -> sax.SDict:
     """Euler bend model."""
@@ -121,7 +126,7 @@ def taper(
     *,
     wl: Float = 1.55,
     length: float = 10.0,
-    loss_dB_cm: float = 0.0,
+    loss_dB_cm: float = TECH_IL_LOSS_TAPER,
     cross_section="strip",
 ) -> sax.SDict:
     """Taper model."""
@@ -142,7 +147,7 @@ def taper_strip_to_ridge(
     *,
     wl: Float = 1.55,
     length: float = 10.0,
-    loss_dB_cm: float = 0.0,
+    loss_dB_cm: float = TECH_IL_LOSS_TAPER,
     cross_section="strip",
 ) -> sax.SDict:
     """Taper strip to ridge model."""

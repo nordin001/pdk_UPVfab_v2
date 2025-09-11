@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=..\build\schemas\test_schematic.json
+instances:
+  ring1:
+    component: ring_single
+    settings: {}
+connections: {}
+routes: {}
+nets: []
+ports:
+  o1: ring1,o1
+  o2: ring1,o2
+placements:
+  ring1:
+    x: 0.0
+    y: 0.0
+    dx: 74.61
+    dy: 66.584

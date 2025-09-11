@@ -7,13 +7,13 @@ if __name__ == "__main__":
 
     from upvfab.sin300.cband import PDK, cells
 
-    c = cells.ring_single(radius=10)
+    c = cells.ring_single(length_x=100)
     c.show()
     netlist = c.get_netlist()
     c.plot_netlist()
     models = PDK.models
     circuit, _ = sax.circuit(netlist, models=models)  # type: ignore
-    wl = jnp.linspace(1.5, 1.6, 3000)
+    wl = jnp.linspace(1.53, 1.57, 3000)
 
     S = circuit(wl=wl)
     plt.figure(figsize=(14, 4))
