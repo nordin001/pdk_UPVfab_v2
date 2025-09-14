@@ -159,6 +159,9 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Simulations cache
+# *.npz
+
 *.DS_Store
 .DS_Store
 *Thumbs.db
