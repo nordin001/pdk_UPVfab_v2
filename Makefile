@@ -28,9 +28,7 @@ notebooks:
 	jupytext docs/**/*.py --to ipynb
 
 docs:
-	uv run python .github/write_cells_sin300_cband.py
-	uv run python .github/write_cells_si500.py
-	uv run python .github/write_cells_sin300.py
+	uv run python .github/write_cells.py
 	uv run jb build docs
 
 .PHONY: drc doc docs
