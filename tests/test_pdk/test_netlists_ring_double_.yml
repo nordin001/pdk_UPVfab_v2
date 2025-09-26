@@ -1,0 +1,87 @@
+instances:
+  coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_0_0:
+    component: coupler_ring
+    info: {}
+    settings:
+      bend: bend_euler
+      cross_section: strip
+      gap: 0.6
+      length_extension: 100
+      length_x: 0.01
+      radius: 100
+      straight: straight
+  coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_m10_203210_A180:
+    component: coupler_ring
+    info: {}
+    settings:
+      bend: bend_euler
+      cross_section: strip
+      gap: 0.6
+      length_extension: 100
+      length_x: 0.01
+      radius: 100
+      straight: straight
+  straight_L0p01_CSstrip_WNone_N2_100000_101610_A270:
+    component: straight
+    info:
+      length: 0.01
+      route_info_length: 0.01
+      route_info_strip_length: 0.01
+      route_info_type: strip
+      route_info_weight: 0.01
+      width: 1
+    settings:
+      cross_section: strip
+      length: 0.01
+      npoints: 2
+      width: null
+  straight_L0p01_CSstrip_WNone_N2_m100010_101600_A90:
+    component: straight
+    info:
+      length: 0.01
+      route_info_length: 0.01
+      route_info_strip_length: 0.01
+      route_info_type: strip
+      route_info_weight: 0.01
+      width: 1
+    settings:
+      cross_section: strip
+      length: 0.01
+      npoints: 2
+      width: null
+name: ring_double_G0p6_GTNone_GBNone_R100_LX0p01_LY0p01_CSstrip_LE100
+nets:
+- p1: coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_0_0,o2
+  p2: straight_L0p01_CSstrip_WNone_N2_m100010_101600_A90,o1
+- p1: coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_0_0,o3
+  p2: straight_L0p01_CSstrip_WNone_N2_100000_101610_A270,o2
+- p1: coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_m10_203210_A180,o2
+  p2: straight_L0p01_CSstrip_WNone_N2_100000_101610_A270,o1
+- p1: coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_m10_203210_A180,o3
+  p2: straight_L0p01_CSstrip_WNone_N2_m100010_101600_A90,o2
+placements:
+  coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_0_0:
+    mirror: false
+    rotation: 0
+    x: 0
+    y: 0
+  coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_m10_203210_A180:
+    mirror: false
+    rotation: 180
+    x: -0.01
+    y: 203.21
+  straight_L0p01_CSstrip_WNone_N2_100000_101610_A270:
+    mirror: false
+    rotation: 270
+    x: 100
+    y: 101.61
+  straight_L0p01_CSstrip_WNone_N2_m100010_101600_A90:
+    mirror: false
+    rotation: 90
+    x: -100.01
+    y: 101.6
+ports:
+  o1: coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_0_0,o1
+  o2: coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_0_0,o4
+  o3: coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_m10_203210_A180,o4
+  o4: coupler_ring_LX0p01_G0p6_R100_Bbend_euler_Sstraight_CSs_ff19e1f3_m10_203210_A180,o1

@@ -1,0 +1,51 @@
+instances:
+  compass_gdsfactorypcomponentspshapespcompass_S20_30_LHE_0a05a8ea_0_0:
+    component: compass
+    info: {}
+    settings:
+      auto_rename_ports: true
+      layer: HEATER
+      port_inclusion: 0
+      port_orientations:
+      - 180
+      - 90
+      - 0
+      - -90
+      port_type: null
+      size:
+      - 20
+      - 30
+  compass_gdsfactorypcomponentspshapespcompass_S20_30_LPA_c746d2ee_0_0:
+    component: compass
+    info: {}
+    settings:
+      auto_rename_ports: false
+      layer: PAD
+      port_inclusion: 0
+      port_orientations:
+      - 180
+      - 90
+      - 0
+      - -90
+      port_type: electrical
+      size:
+      - 20
+      - 30
+name: via_stack_heater_mtop_S20_30
+nets: []
+placements:
+  compass_gdsfactorypcomponentspshapespcompass_S20_30_LHE_0a05a8ea_0_0:
+    mirror: false
+    rotation: 0
+    x: 0
+    y: 0
+  compass_gdsfactorypcomponentspshapespcompass_S20_30_LPA_c746d2ee_0_0:
+    mirror: false
+    rotation: 0
+    x: 0
+    y: 0
+ports:
+  e1: compass_gdsfactorypcomponentspshapespcompass_S20_30_LPA_c746d2ee_0_0,e1
+  e2: compass_gdsfactorypcomponentspshapespcompass_S20_30_LPA_c746d2ee_0_0,e2
+  e3: compass_gdsfactorypcomponentspshapespcompass_S20_30_LPA_c746d2ee_0_0,e3
+  e4: compass_gdsfactorypcomponentspshapespcompass_S20_30_LPA_c746d2ee_0_0,e4

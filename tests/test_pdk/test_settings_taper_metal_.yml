@@ -1,0 +1,10 @@
+info:
+  length: 10
+  width1: 30
+  width2: 15
+name: taper_metal_L10_W30_W15_CSmetal_routing
+settings:
+  cross_section: metal_routing
+  length: 10
+  width1: 30
+  width2: 15
