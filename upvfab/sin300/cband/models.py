@@ -18,6 +18,12 @@ nm = 1e-3
 FloatArray = NDArray[jnp.floating]
 Float = float | FloatArray
 
+TECH_LOSS_DB_CM = 1.0
+TECH_NEFF = 1.67
+TECH_NG = 2.00
+
+TECH_IL_LOSS_TAPER = 0.0
+
 ################
 # Straights
 ################
@@ -25,27 +31,26 @@ Float = float | FloatArray
 straight_strip = partial(
     sm.straight,
     length=10.0,
-    loss_dB_cm=3.0,
+    loss_dB_cm=TECH_LOSS_DB_CM,
     wl0=1.55,
-    neff=2.38,
-    ng=4.30,
+    neff=TECH_NEFF,
+    ng=TECH_NG,
 )
 
 straight_rib = partial(
     sm.straight,
     length=10.0,
-    loss_dB_cm=3.0,
+    loss_dB_cm=TECH_LOSS_DB_CM,
     wl0=1.55,
-    neff=2.38,
-    ng=4.30,
+    neff=TECH_NEFF,
+    ng=TECH_NG,
 )
-
 
 def straight(
     *,
     wl: Float = 1.55,
     length: float = 10.0,
-    loss_dB_cm: float = 3.0,
+    loss_dB_cm: float = TECH_LOSS_DB_CM,
     cross_section: str = "strip",
 ) -> sax.SDict:
     """Straight waveguide model."""
@@ -78,7 +83,7 @@ def bend_s(
     *,
     wl: Float = 1.55,
     length: float = 10.0,
-    loss_dB_cm=3.0,
+    loss_dB_cm=TECH_LOSS_DB_CM,
     cross_section="strip",
 ) -> sax.SDict:
     """Bend S model."""
@@ -95,7 +100,7 @@ def bend_euler(
     *,
     wl: Float = 1.55,
     length: float = 10.0,
-    loss_dB_cm: float = 3,
+    loss_dB_cm: float = TECH_LOSS_DB_CM,
     cross_section="strip",
 ) -> sax.SDict:
     """Euler bend model."""
@@ -121,7 +126,7 @@ def taper(
     *,
     wl: Float = 1.55,
     length: float = 10.0,
-    loss_dB_cm: float = 0.0,
+    loss_dB_cm: float = TECH_IL_LOSS_TAPER,
     cross_section="strip",
 ) -> sax.SDict:
     """Taper model."""
@@ -142,7 +147,7 @@ def taper_strip_to_ridge(
     *,
     wl: Float = 1.55,
     length: float = 10.0,
-    loss_dB_cm: float = 0.0,
+    loss_dB_cm: float = TECH_IL_LOSS_TAPER,
     cross_section="strip",
 ) -> sax.SDict:
     """Taper strip to ridge model."""
@@ -240,34 +245,33 @@ def coupler(
 # grating couplers Rectangular
 ##############################
 
-grating_coupler_rectangular_strip = partial(
-    sm.grating_coupler, loss=6, bandwidth=35 * nm, wl=1.55
-)
-grating_coupler_rectangular_rib = grating_coupler_rectangular_strip
-
-
 def grating_coupler_rectangular(
+    *,
     wl: Float = 1.55,
-    cross_section="strip",
 ) -> sax.SDict:
-    """Grating coupler rectangular model."""
-    # TODO: take more grating_coupler_rectangular arguments into account
-    wl = jnp.asarray(wl)  # type: ignore
-    fs = {
-        "strip": grating_coupler_rectangular_strip,
-        "rib": grating_coupler_rectangular_rib,
-    }
-    f = fs[cross_section]
-    return f(wl=wl)  # type: ignore
+    """Grating coupler rectangular strip model."""
+    return sm.grating_coupler(
+        wl=wl,
+        loss=6,
+        bandwidth=35 * nm,
+    )
 
 
 ##############################
 # grating couplers Elliptical
 ##############################
 
-grating_coupler_elliptical = partial(
-    sm.grating_coupler, loss=6, bandwidth=35 * nm, wl=1.55
-)
+def grating_coupler_elliptical(
+    *,
+    wl: Float = 1.55,
+) -> sax.SDict:
+    """Grating coupler elliptical model."""
+    return sm.grating_coupler(
+        wl=wl,
+        loss=8,
+        bandwidth=35 * nm,
+    )
+
 
 ################
 # Imported
