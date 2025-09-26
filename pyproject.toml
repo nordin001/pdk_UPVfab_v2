@@ -51,6 +51,9 @@ timeout = 300
 [tool.gdsfactoryplus.pdk]
 name = "upvfab.sin300.cband"
 
+[tool.gdsfactoryplus]
+name = "upvfab.sin300.cband"
+
 [tool.gdsfactoryplus.sim.wls]
 max = 1.6
 min = 1.5
