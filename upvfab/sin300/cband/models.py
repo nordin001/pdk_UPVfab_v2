@@ -53,7 +53,14 @@ def straight(
     loss_dB_cm: float = TECH_LOSS_DB_CM,
     cross_section: str = "strip",
 ) -> sax.SDict:
-    """Straight waveguide model."""
+    """Straight waveguide model.
+
+    Args:
+        wl: wavelength [um].
+        length: length [um].
+        loss_dB_cm: loss [dB/cm].
+        cross_section: cross section type, either "strip" or "rib".
+    """
     wl = jnp.asarray(wl)  # type: ignore
     fs = {
         "strip": straight_strip,
@@ -252,7 +259,7 @@ def grating_coupler_rectangular(
     """Grating coupler rectangular strip model."""
     return sm.grating_coupler(
         wl=wl,
-        loss=6,
+        loss=8,
         bandwidth=35 * nm,
     )
 
