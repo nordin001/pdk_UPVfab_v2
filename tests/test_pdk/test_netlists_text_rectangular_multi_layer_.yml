@@ -1,0 +1,31 @@
+instances:
+  text_rectangular_TUPVfab_S3_Jleft_LPAD_0_0:
+    component: text_rectangular
+    info: {}
+    settings:
+      justify: left
+      layer: PAD
+      size: 3
+      text: UPVfab
+  text_rectangular_TUPVfab_S3_Jleft_LWG_0_0:
+    component: text_rectangular
+    info: {}
+    settings:
+      justify: left
+      layer: WG
+      size: 3
+      text: UPVfab
+name: text_rectangular_multi_layer_TUPVfab_LWG_PAD_TFtext_rectangular
+nets: []
+placements:
+  text_rectangular_TUPVfab_S3_Jleft_LPAD_0_0:
+    mirror: false
+    rotation: 0
+    x: 0
+    y: 0
+  text_rectangular_TUPVfab_S3_Jleft_LWG_0_0:
+    mirror: false
+    rotation: 0
+    x: 0
+    y: 0
+ports: {}

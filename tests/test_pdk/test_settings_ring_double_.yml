@@ -1,0 +1,9 @@
+info: {}
+name: ring_double_G0p6_GTNone_GBNone_R100_LX0p01_LY0p01_CSstrip_LE100
+settings:
+  cross_section: strip
+  gap: 0.6
+  length_extension: 100
+  length_x: 0.01
+  length_y: 0.01
+  radius: 100

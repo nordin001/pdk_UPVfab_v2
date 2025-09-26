@@ -1,0 +1,10 @@
+info: {}
+name: coupler_ring_LX14_G0p6_R100_Bbend_euler_Sstraight_CSstrip_LE100
+settings:
+  bend: bend_euler
+  cross_section: strip
+  gap: 0.6
+  length_extension: 100
+  length_x: 14
+  radius: 100
+  straight: straight

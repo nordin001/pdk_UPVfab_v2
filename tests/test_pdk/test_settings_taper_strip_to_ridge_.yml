@@ -1,0 +1,10 @@
+info:
+  length: 10
+name: taper_strip_to_ridge_L10_W1_W1_WS0p2_WS30_CSstrip
+settings:
+  cross_section: strip
+  length: 10
+  w_slab1: 0.2
+  w_slab2: 30
+  width1: 1
+  width2: 1

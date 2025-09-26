@@ -1,0 +1,8 @@
+info:
+  xsize: 20
+  ysize: 30
+name: via_stack_heater_mtop_S20_30
+settings:
+  size:
+  - 20
+  - 30

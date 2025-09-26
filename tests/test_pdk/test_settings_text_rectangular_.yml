@@ -1,0 +1,7 @@
+info: {}
+name: text_rectangular_TUPVfab_S3_Jleft_LPAD
+settings:
+  justify: left
+  layer: PAD
+  size: 3
+  text: UPVfab

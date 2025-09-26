@@ -1,0 +1,8 @@
+info: {}
+name: text_rectangular_multi_layer_TUPVfab_LWG_PAD_TFtext_rectangular
+settings:
+  layers:
+  - WG
+  - PAD
+  text: UPVfab
+  text_factory: text_rectangular

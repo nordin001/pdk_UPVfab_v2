@@ -1,0 +1,10 @@
+info:
+  length: 10
+  width1: 1
+  width2: 2
+name: taper_L10_W1_W2_CSstrip
+settings:
+  cross_section: strip
+  length: 10
+  width1: 1
+  width2: 2

@@ -1,0 +1,7 @@
+info: {}
+name: spiral_racetrack_heater_S10_N5_SL200_CSstrip
+settings:
+  cross_section: strip
+  num: 5
+  spacing: 10
+  straight_length: 200

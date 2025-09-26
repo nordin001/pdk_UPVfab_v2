@@ -1,0 +1,18 @@
+info:
+  end_angle: 0
+  length: 51.388
+  min_bend_radius: 49.795
+  route_info_length: 51.388
+  route_info_min_bend_radius: 49.795
+  route_info_n_bend_s: 1
+  route_info_strip_length: 51.388
+  route_info_type: strip
+  route_info_weight: 51.388
+  start_angle: 0
+name: bend_s_S50_10_CSstrip_WNone_AMRVFalse
+settings:
+  allow_min_radius_violation: false
+  cross_section: strip
+  size:
+  - 50
+  - 10

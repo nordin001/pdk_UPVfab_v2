@@ -1,0 +1,11 @@
+info:
+  fiber_angle: 44
+  polarization: te
+  wavelength: 1.55
+name: grating_coupler_rectangular_P1p977_NP12_LT120_W1p55_CSstrip
+settings:
+  cross_section: strip
+  length_taper: 120
+  n_periods: 12
+  period: 1.977
+  wavelength: 1.55
