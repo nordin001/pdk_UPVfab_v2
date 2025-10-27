@@ -13,11 +13,12 @@ classifiers = [
   "Operating System :: OS Independent"
 ]
 dependencies = [
-  "gdsfactory~=9.16.3",
+  "gdsfactory~=9.19.0",
   "doroutes>=0.2.0",
   "gdsfactoryplus",
   "gplugins[sax,femwell,tidy3d]~=1.4.2",
   "meow-sim",
+  "scikit-learn>=1.7.2",
 ]
 description = "Sample Photonics PDK"
 keywords = ["python"]
